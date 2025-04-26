@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luno Bot - Многофункциональный Discord бот</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+</div>
+    <div class="main-content" id="top">
+        <h1 class="bot-name">Luno Bot</h1>
+        <p class="bot-description">
+            Очень настраиваемый многоцелевой бот для приветственного изображения, 
+            подробных журналов, социальных команд, модерации и многого другого...
+        </p>
+        <div class="buttons">
+            <a href="https://discord.com/oauth2/authorize?client_id=1361713673944567979&permissions=8&integration_type=0&scope=applications.commands+bot" class="btn btn-primary">Добавить в Discord</a>
+            <a href="#commands" class="btn btn-secondary" id="viewFeaturesBtn">Посмотр Функций</a>
+        </div>
+        
+        <div class="servers-section">
+            <h2 class="servers-title">Нам доверяют более 1.000 Discord серверов</h2>
+            <div class="servers-container">
+                <div class="servers-carousel">
+                    <!-- Серверы будут добавлены через JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <div class="maintenance-notice">
+            <div class="maintenance-content">
+                <span class="maintenance-icon">⚠️</span>
+                <span class="maintenance-text">Бот временно не работает, но его можно установить. Приносим извинения за неудобства!</span>
+                <div class="status-indicator"></div>
+            </div>
+        </div>
+        
+        <div class="commands-section" id="commands">
+            <h2 class="commands-title">Команды бота</h2>
+            <div class="commands-grid">
+                <!-- Команды будут добавлены через JavaScript -->
+            </div>
+        </div>
+
+        <!-- Модальные окна будут загружены через JavaScript -->
+        <div id="termsModal" class="modal"></div>
+        <div id="privacyModal" class="modal"></div>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3 class="footer-title">Luno Bot</h3>
+                    <p>Многофункциональный Discord бот для модерации, развлечений и управления сервером.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Поддержка</h3>
+                    <div class="footer-links">
+                        <a href="https://discord.gg/aYyjwBcS" target="_blank">Discord</a>
+                        <a href="https://t.me/Noumen_s" target="_blank">Telegram</a>
+                        <a href="https://github.com/SmartToneOfficial" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Правовая информация</h3>
+                    <div class="footer-links">
+                        <a href="#" id="termsLink">Пользовательское соглашение</a>
+                        <a href="#" id="privacyLink">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Luno Bot. Все права защищены.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('viewFeaturesBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('commands').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // Или для всех ссылок с якорями
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
